@@ -2,8 +2,19 @@ import hotBg from './assets/hot.jpg';
 import coldBg from './assets/cold.jpg';
 // import Des from '.components/Des';
 // import Des from './components/des';
+import { useEffect } from 'react';
 import Description from './components/Description';
+import { getWeatherData } from './WeatherService';
 function App() {
+
+  useEffect(() =>{
+    const fetchWeatherDatas = async () =>
+    {
+      const data = await getWeatherData('Paris');
+    };
+    fetchWeatherDatas();
+},[]);
+
   return (
 <div className="app" style={{backgroundImage:`url(${coldBg})` }}>
   <div className = "overlay">
