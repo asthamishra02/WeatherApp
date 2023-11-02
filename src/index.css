@@ -85,3 +85,9 @@
 .temperature>h1{
   font-size:60px;
 }
+.section__temperature{
+  margin:auto;
+}
+.app{
+  position:fixed;
+}
