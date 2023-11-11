@@ -1,16 +1,22 @@
 import hotBg from './assets/hot.jpg';
 import coldBg from './assets/cold.jpg';
+// import winterBg from './assets/winter.jpg';
+
 // import Des from '.components/Des';
 // import Des from './components/des';
-import { useEffect } from 'react';
+import { useEffect,useState} from 'react';
 import Description from './components/Description';
 import { getWeatherData } from './WeatherService';
+// import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
 function App() {
+
+  const[weather,setWeather] = useState(null);
 
   useEffect(() =>{
     const fetchWeatherDatas = async () =>
     {
       const data = await getWeatherData('Paris');
+      console.log(data);
     };
     fetchWeatherDatas();
 },[]);
@@ -18,6 +24,11 @@ function App() {
   return (
 <div className="app" style={{backgroundImage:`url(${coldBg})` }}>
   <div className = "overlay">
+    {
+      weather && {
+        
+      }
+    }
     <div className= "container">
       <div className='section section__inputs'>
         <input type="text" name="city" placeholder='Enter city' />
@@ -36,10 +47,11 @@ function App() {
       </div>
 
       {/* botton description */}
+      <Description />
     </div>
   </div>
 
-    <Description />
+    {/* <Description /> */}
 </div>
   );
 }
