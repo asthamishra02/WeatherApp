@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3,1fr);
      gap:2.5rem;
      position:absolute;
-     bottom: 20%;
+     bottom: 5%;
 }
 .card{
     display: flex;
@@ -35,6 +35,10 @@
  @media screen and (max-width: 1024px){
     .section__descriptions{
         grid-template-columns: 1fr 1fr;
+        /* margin-top: 50%; */
     }
 } 
+/* .section__descriptions{
+    margin-top: 10% ;
+} */
 
