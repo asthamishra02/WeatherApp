@@ -49,7 +49,7 @@ const Description = ({weather,units}) => {
         id:6,
         icon: <FaWind/>,
         title:"wind speed",
-        data:weather.speed.toFixed()-273,
+        data:weather.speed.toFixed(),
         unit:windUnit,
     },
   ];
